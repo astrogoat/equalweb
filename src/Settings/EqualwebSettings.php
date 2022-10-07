@@ -2,13 +2,13 @@
 
 namespace Astrogoat\Equalweb\Settings;
 
+use Astrogoat\Equalweb\Actions\EqualwebAction;
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
-use Astrogoat\Equalweb\Actions\EqualwebAction;
 
 class EqualwebSettings extends AppSettings
 {
-     public string $sitekey;
+    public string $sitekey;
 
     public function rules(): array
     {

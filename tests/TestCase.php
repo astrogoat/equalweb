@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Equalweb\Tests;
 
+use Astrogoat\Equalweb\EqualwebServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Equalweb\EqualwebServiceProvider;
 
 class TestCase extends Orchestra
 {
