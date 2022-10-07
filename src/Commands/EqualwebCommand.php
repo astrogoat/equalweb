@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Astrogoat\Equalweb\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class EqualwebCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'equalweb';
 
     public $description = 'My command';
 

@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "astrogoat/equalweb",
+    "description": "A Equalweb app for Strata",
     "keywords": [
-        ":vendor_name",
+        "astrogoat",
         "laravel",
-        ":package_slug"
+        "equalweb"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/astrogoat/equalweb",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Megan Miller",
+            "email": "megan@smoldev.dev",
             "role": "Developer"
         }
     ],
@@ -22,8 +22,8 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "astrogoat/strata": "^0.1.9",
+        "php": "^8.1",
+        "astrogoat/strata": "^0.2.1",
         "spatie/laravel-package-tools": "^1.4.3",
         "illuminate/contracts": "^8.37 || ^9.9"
     },
@@ -37,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Astrogoat\\Equalweb\\": "src",
+            "Astrogoat\\Equalweb\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Astrogoat\\Equalweb\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -56,10 +56,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Astrogoat\\Equalweb\\EqualwebServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "Equalweb": "Astrogoat\\Equalweb\\EqualwebFacade"
             }
         }
     },

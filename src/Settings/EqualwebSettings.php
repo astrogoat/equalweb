@@ -1,24 +1,24 @@
 <?php
 
-namespace VendorName\Skeleton\Settings;
+namespace Astrogoat\Equalweb\Settings;
 
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
-use VendorName\Skeleton\Actions\SkeletonAction;
+use Astrogoat\Equalweb\Actions\EqualwebAction;
 
-class SkeletonSettings extends AppSettings
+class EqualwebSettings extends AppSettings
 {
-    // public string $url;
+     public string $sitekey;
 
     public function rules(): array
     {
         return [
-            // 'url' => Rule::requiredIf($this->enabled === true),
+             'sitekey' => Rule::requiredIf($this->enabled === true),
         ];
     }
 
     // protected static array $actions = [
-    //     SkeletonAction::class,
+    //     EqualwebAction::class,
     // ];
 
     // public static function encrypted(): array
@@ -28,11 +28,11 @@ class SkeletonSettings extends AppSettings
 
     public function description(): string
     {
-        return 'Interact with Skeleton.';
+        return 'Interact with Equalweb.';
     }
 
     public static function group(): string
     {
-        return 'skeleton';
+        return 'equalweb';
     }
 }
