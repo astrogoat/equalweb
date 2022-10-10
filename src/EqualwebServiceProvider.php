@@ -18,8 +18,6 @@ class EqualwebServiceProvider extends PackageServiceProvider
             ->settings(EqualwebSettings::class)
             ->includeFrontendViews(function (IncludeFrontendViews $views) {
                 return $views->addToEnd('equalweb::script');
-            })->includeFrontendViews(function(IncludeFrontendViews $views) {
-                return $views->addToHead('equalweb::style');
             })
             ->migrations([
                 __DIR__ . '/../database/migrations/settings',
