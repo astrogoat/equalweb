@@ -1,6 +1,6 @@
 <script>
     window.interdeal = {
-        "sitekey": {{settings('\\Astrogoat\\Equalweb\\Settings\\EqualwebSettings', 'sitekey')}},
+        "sitekey": "{{settings('\\Astrogoat\\Equalweb\\Settings\\EqualwebSettings', 'sitekey')}}",
         "Menulang": "EN",
         "domains": {
             "js": "https://cdn.equalweb.com/",
