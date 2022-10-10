@@ -18,7 +18,7 @@ class EqualwebServiceProvider extends PackageServiceProvider
             ->settings(EqualwebSettings::class)
             ->includeFrontendViews(function (IncludeFrontendViews $views) {
                 return $views->addToEnd('equalweb::script');
-            })->includeFrontendViews(function(IncludeFrontendViews $views) {
+            })->includeFrontendViews(function (IncludeFrontendViews $views) {
                 return $views->addToHead('equalweb::style');
             })
             ->migrations([
