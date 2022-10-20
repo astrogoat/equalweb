@@ -16,12 +16,24 @@ class EqualwebServiceProvider extends PackageServiceProvider
         return $app
             ->name('equalweb')
             ->settings(EqualwebSettings::class)
+            ->publishOnInstall([
+                'equalweb-assets',
+            ])
             ->includeFrontendViews(function (IncludeFrontendViews $views) {
-                return $views->addToEnd('equalweb::script');
+                return $views->addToEnd('equalweb::script')->addToHead('equalweb::style');
             })
             ->migrations([
                 __DIR__ . '/../database/migrations/settings',
             ]);
+    }
+
+    public function bootingPackage()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../public' => public_path('vendor/equalweb'),
+            ], 'equalweb-assets');
+        }
     }
 
     public function registeringPackage()
