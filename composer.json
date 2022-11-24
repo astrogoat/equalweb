@@ -1,6 +1,6 @@
 {
     "name": "astrogoat/equalweb",
-    "description": "A Equalweb app for Strata",
+    "description": "A EqualWeb app for Strata",
     "keywords": [
         "astrogoat",
         "laravel",
@@ -57,10 +57,7 @@
         "laravel": {
             "providers": [
                 "Astrogoat\\Equalweb\\EqualwebServiceProvider"
-            ],
-            "aliases": {
-                "Equalweb": "Astrogoat\\Equalweb\\EqualwebFacade"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
