@@ -18,7 +18,7 @@ class EqualwebSettings extends AppSettings
         ];
     }
 
-    public function help() : array
+    public function help(): array
     {
         return [
             'querySelector' => 'This is the selector the EqualWeb widget will listen for clicks on to open the EqualWeb menu.',
