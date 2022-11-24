@@ -2,33 +2,32 @@
 
 namespace Astrogoat\Equalweb\Settings;
 
-use Astrogoat\Equalweb\Actions\EqualwebAction;
 use Helix\Lego\Settings\AppSettings;
 use Illuminate\Validation\Rule;
 
 class EqualwebSettings extends AppSettings
 {
     public string $sitekey;
+    public string $querySelector;
 
     public function rules(): array
     {
         return [
              'sitekey' => Rule::requiredIf($this->enabled === true),
+             'querySelector' => Rule::requiredIf($this->enabled === true),
         ];
     }
 
-    // protected static array $actions = [
-    //     EqualwebAction::class,
-    // ];
-
-    // public static function encrypted(): array
-    // {
-    //     return ['access_token'];
-    // }
+    public function help() : array
+    {
+        return [
+            'querySelector' => 'This is the selector the EqualWeb widget will listen for clicks on to open the EqualWeb menu.',
+        ];
+    }
 
     public function description(): string
     {
-        return 'Interact with Equalweb.';
+        return 'Make your Website ADA Compliance – Tailored for Every Business Size!';
     }
 
     public static function group(): string
